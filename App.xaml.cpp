@@ -21,6 +21,9 @@ using namespace WinUI3_TransparentBackground_CppWinRT::implementation;
 /// Initializes the singleton application object.  This is the first line of authored code
 /// executed, and as such is the logical equivalent of main() or WinMain().
 /// </summary>
+/// 
+winrt::Microsoft::UI::Xaml::Window App::window{ nullptr };
+//初始化App的静态成员window
 App::App()
 {
     InitializeComponent();
@@ -44,5 +47,8 @@ App::App()
 void App::OnLaunched(LaunchActivatedEventArgs const&)
 {
     window = make<MainWindow>();
+
+    window.ExtendsContentIntoTitleBar(true);
+
     window.Activate();
 }

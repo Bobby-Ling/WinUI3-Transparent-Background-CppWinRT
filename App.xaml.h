@@ -12,8 +12,9 @@ namespace winrt::WinUI3_TransparentBackground_CppWinRT::implementation
         App();
 
         void OnLaunched(Microsoft::UI::Xaml::LaunchActivatedEventArgs const&);
-
+        static winrt::Microsoft::UI::Xaml::Window Window() { return window; };
+        //To access current window because Window::Current() is always null in destop application
     private:
-        winrt::Microsoft::UI::Xaml::Window window{ nullptr };
+        static winrt::Microsoft::UI::Xaml::Window window;
     };
 }

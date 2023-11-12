@@ -9,6 +9,20 @@
     mc:Ignorable="d">
 
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
+        <Rectangle x:Name="TitleBar" Opacity="0" Height="28" Fill="Transparent" VerticalAlignment="Top"/>
+        <ColorPicker 
+            BorderThickness="2"
+            ColorChanged="SystemBackdropColorChanged"
+            x:Name="SystemBackdropColor"
+            ColorSpectrumShape="Box"
+            IsMoreButtonVisible="False"
+            IsColorSliderVisible="True"
+            IsColorChannelTextInputVisible="True"
+            IsHexInputVisible="True"
+            IsAlphaEnabled="True"
+            IsAlphaSliderVisible="True"
+            IsAlphaTextInputVisible="True"
+            >
+        </ColorPicker>
     </StackPanel>
 </Window>
